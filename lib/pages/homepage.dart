@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, avoid_print
 
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi/models/student.dart';
 import 'package:flutter_webapi/nameprefix.dart';
+import 'package:flutter_webapi/pages/detailspage.dart';
 
 import 'package:http/http.dart' as http;
 
@@ -63,6 +64,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                       onTap: () {
                         // membuka details dari student
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    DetailsPage(student: data)));
                       },
                     ),
                   );
