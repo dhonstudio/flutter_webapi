@@ -47,13 +47,13 @@ class _HomePageState extends State<HomePage> {
             if (!snapshot.hasData) return CircularProgressIndicator();
             // data ada dan ditemukan kemudian ditampilkan
             return ListView.builder(
-                itemCount: snapshot.data.lenght,
+                itemCount: snapshot.data.length,
                 itemBuilder: (BuildContext context, int index) {
                   var data = snapshot.data[index];
                   return Card(
                     child: ListTile(
                       leading: Icon(Icons.person_outline_outlined),
-                      trailing: Icon(Icons.list_outlined),
+                      trailing: Icon(Icons.view_list),
                       title: Text(
                         data.name,
                         style: TextStyle(
